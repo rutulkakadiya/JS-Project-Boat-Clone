@@ -139,3 +139,7 @@
   width: 100%;
   border: 1px solid transparent;
 }
+
+.offcanvas-backdrop.show{
+  opacity: 0.3;
+}

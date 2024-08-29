@@ -29,9 +29,28 @@
 
 <body id="body">
 
+    <div class="hidden z-[100]" id="confirom_order_div">
+        <div class="confirom_order_div1 fixed top-0 z-[100] h-[100vh] w-[100%]"
+            style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+            <div class="flex justify-center items-center" id="confirom_order_div2">
+                <div class="confirom_div_data h-[50vh] w-[50%] mt-[25vh] rounded-[15px] bg-white">
+                    <div id="closes3"
+                        class="close h-[30px] w-[30px] me-3 mt-2 ms-[94%] flex justify-center items-center bg-[#f8f9fb] rounded-[50%] cursor-pointer">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <center>
+                        <img class="h-[150px] mt-[30px]" src="Asset/Image/confirom_order.gif" alt="">
+
+                        <p class="font-bold text-[18px]">Your item is order successfully...</p>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="item_data" class="hidden">
         <div class="mainDiv h-[100%] w-[100%] fixed top-0"
-            style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+            style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); z-index: 100;">
             <div id="item1" class="div flex justify-center h-[100%] w-[100%] items-center">
                 <div class="data flex h-[50vh] w-[50%] rounded-[15px] bg-white">
                     <div class="data_div1 w-[35%] flex justify-center items-center">
@@ -82,7 +101,7 @@
 
     <div id="item_data1" class="hidden">
         <div class="mainDiv h-[100%] w-[100%] fixed top-0"
-            style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+            style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); z-index: 100;">
             <div id="item1" class="div flex justify-center h-[100%] w-[100%] items-center">
                 <div class="data flex h-[50vh] w-[50%] rounded-[15px] bg-white">
                     <div class="data_div1 w-[35%] flex justify-center items-center">
@@ -135,7 +154,7 @@
 
     <div id="item_data2" class="hidden">
         <div class="mainDiv h-[100%] w-[100%] fixed top-0"
-            style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+            style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)); z-index: 100;">
             <div id="item1" class="div flex justify-center h-[100%] w-[100%] items-center">
                 <div class="data flex h-[50vh] w-[50%] rounded-[15px] bg-white">
                     <div class="data_div1 w-[35%] flex justify-center items-center">
@@ -719,7 +738,7 @@
                         <p class="text-[12px]">
                             <span class="ms-2 text-[18px] text-[#f5c730]">&starf;</span> 5.0
                         </p>
-                        <button
+                        <button id="addToCartButton1"
                             class="btn text-white h-[40px] w-[150px] px-2 bg-black rounded-[5px] ms-2 mt-2 mb-2 addToCartButton"
                             type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight">Add to Cart</button>
@@ -795,6 +814,7 @@
                 </div>
             </div>
 
+
             <!-- Cart Offcanvas -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                 aria-labelledby="offcanvasRightLabel">
@@ -811,7 +831,7 @@
                                     <p class="text-[16px] font-bold">Cart Total :</p>
                                     <p class="text-[14px]" id="cart_total_amt"></p>
                                 </div>
-    
+
                                 <div class="shipping flex justify-between">
                                     <p class="text-[16px] font-bold">Shipping :</p>
                                     <p class="text-[14px]">FREE</p>
@@ -833,8 +853,9 @@
                             </div>
 
                             <div class="order w-[50%] me-[35px]">
-                                <button class="h-[45px] w-[100%] bg-black text-white rounded-[5px]"
-                                    id="confirom_button">Confirom Order</button>
+                                <button class="btn-close h-[45px] w-[100%] bg-black text-white rounded-[5px]"
+                                    id="confirom_button" type="button" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Confirom Order</button>
                             </div>
                         </div>
 
@@ -929,7 +950,7 @@
                             <span class="ms-2 text-[18px] text-[#f5c730]">&starf;</span> 5.0
                         </p>
                         <button
-                            class="btn text-white h-[40px] w-[150px] px-2 bg-black rounded-[5px] ms-2 mt-2 mb-2 addToCartButton"
+                            xclass="btn text-white h-[40px] w-[150px] px-2 bg-black rounded-[5px] ms-2 mt-2 mb-2 addToCartButton"
                             type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight">Add to Cart</button>
 
@@ -939,7 +960,6 @@
         </div>
 
         <div id="recentlyViewed" class="contentDiv mt-3" style="display: none;">
-
             <p>Content for Recently Viewed...</p>
         </div>
 

@@ -57,7 +57,7 @@ jQuery(document).ready(function () {
 });
 
 
-var countDownDate = new Date("Aug 10, 2024 24:00:00").getTime();
+var countDownDate = new Date("Sep 07, 2024 24:00:00").getTime();
 
 var x = setInterval(function () {
     var now = new Date().getTime();
@@ -92,6 +92,15 @@ document.getElementById("btn1").addEventListener("click", function () {
 document.getElementById("closes").addEventListener("click", function () {
     document.getElementById("item_data").style.display = "none"
 })
+
+document.getElementById("confirom_button").addEventListener("click", function () {
+    document.getElementById("confirom_order_div").style.display = "block"
+})
+const closeButton5 = document.getElementById("closes3");
+closeButton5.addEventListener("click", function () {
+    console.log("dhucxkj")
+    document.getElementById("confirom_order_div").style.display = "none";
+});
 
 document.getElementById("change").addEventListener("click", function () {
 
@@ -311,7 +320,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function addToCart(image, name, price) {
-    const itemDiv = document.getElementById("addToCart");    
+    const itemDiv = document.getElementById("addToCart");
 
     const cartItemDiv = document.createElement("div");
     cartItemDiv.style.marginBottom = "10px";
@@ -384,23 +393,22 @@ function updateTotalAmount() {
     document.getElementById("cart_total_amt1").innerHTML = "₹ " + totalAmount;
 }
 
-
 // order place
 
-    const totalAmountTaxDiv = document.getElementById("totalAmountTaxDiv")
-    const totalAmountTax = document.getElementById("totalAmountTax")
+const totalAmountTaxDiv = document.getElementById("totalAmountTaxDiv")
+const totalAmountTax = document.getElementById("totalAmountTax")
 
-    totalAmountTax.addEventListener("click" , function(){
-        if(totalAmountTaxDiv.style.display === 'none' || totalAmountTaxDiv.style.display === ''){
-            totalAmountTaxDiv.style.display = 'block';
-        }
-        else{
-            totalAmountTaxDiv.style.display = 'none';
-        }
-    })
+totalAmountTax.addEventListener("click", function () {
+    if (totalAmountTaxDiv.style.display === 'none' || totalAmountTaxDiv.style.display === '') {
+        totalAmountTaxDiv.style.display = 'block';
+    }
+    else {
+        totalAmountTaxDiv.style.display = 'none';
+    }
+})
 
-document.getElementById("confirom_button").addEventListener("click" , function(){
-    
+document.getElementById("confirom_button").addEventListener("click", function () {
+
     const confirom_div = document.createElement("div")
 
 })
